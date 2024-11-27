@@ -61,6 +61,7 @@ table {
 	font-style: normal;
 	font-variation-settings: 'wdth' 100;
 }
+// ==================== HEADER ============================
 .header {
 	width: 100%;
 	display: flex;
@@ -141,13 +142,15 @@ table {
 		}
 	}
 }
+// ==================== HEADER ============================
+// ==================== MAIN ==============================
 .main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	margin-top: 5rem;
 	.elements {
+		margin-top: 5rem;
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
@@ -202,6 +205,33 @@ table {
 		}
 	}
 }
+// ==================== MAIN ==============================
+// ==================== ABOUT-ME ==========================
+.main .about-me {
+	margin-top: 0;
+}
+.about-me {
+	display: flex;
+	flex-direction: column;
+	padding: 3rem 0 5rem 0;
+	&__image {
+		width: 100%;
+		img {
+			max-width: 100%;
+			border-radius: 50%;
+		}
+	}
+	&__text {
+		margin-top: 2rem;
+		font-size: 2rem;
+		p {
+			padding: 16px 0;
+			line-height: 26.6px;
+		}
+	}
+}
+// ==================== ABOUT-ME ==========================
+// ==================== FOOTER ============================
 .footer {
 	width: 100%;
 	display: flex;
@@ -248,9 +278,9 @@ table {
 				height: 30px;
 				margin-right: 2rem;
 				transition: transform 0.5s;
-					&:hover {
-						transform: scale(1.1);
-					}
+				&:hover {
+					transform: scale(1.1);
+				}
 			}
 			li:hover a {
 				animation: colorRotate 3s linear 0s infinite;
@@ -283,7 +313,6 @@ table {
 			width: 100%;
 		}
 	}
-
 	&__rights {
 		padding-top: 4rem;
 		display: flex;
@@ -309,12 +338,12 @@ table {
 				&:hover {
 					animation: colorRotate 3s linear 0s infinite;
 				}
-				
 			}
 		}
 	}
 }
-
+// ==================== FOOTER ============================
+// ==================== KEYFRAMES =========================
 @keyframes colorRotate {
 	from {
 		color: #6666ff;
@@ -332,7 +361,9 @@ table {
 		color: #6666ff;
 	}
 }
-//MEDIA QUERIES 578px - 768px
+// ==================== KEYFRAMES =========================
+// ==================== MEDIA QUERIES =====================
+// MEDIA QUERIES 578px - 768px
 @media (min-width: 576px) {
 	.header__topNav nav {
 		justify-content: space-evenly;
@@ -362,11 +393,27 @@ table {
 			align-items: flex-start;
 		}
 	}
+	.about-me {
+		display: flex;
+		flex-direction: row;
+	}
+	.about-me__image {
+		width: 40%;
+	}
+	.about-me__text {
+		width: 55%;
+	}
 }
-//MEDIA QUERIES 768px - 992px
+// MEDIA QUERIES 768px - 992px
 @media (min-width: 768px) {
+	.about-me__image {
+		width: 60%;
+	}
+	.about-me__text {
+		width: 35%;
+	}
 }
-//MEDIA QUERIES 992px - 1200px
+// MEDIA QUERIES 992px - 1200px
 @media (min-width: 992px) {
 	.main .elements__element {
 		margin-bottom: 0;
@@ -375,7 +422,6 @@ table {
 		.wrapper {
 			justify-content: space-evenly;
 		}
-
 		.elements__column {
 			width: 32%;
 		}
@@ -383,8 +429,14 @@ table {
 	.hide {
 		display: block;
 	}
+	.about-me__image {
+		width: 30%;
+	}
+	.about-me__text {
+		width: 35%;
+	}
 }
-//MEDIA QUERIES 1200 px +
+// MEDIA QUERIES 1200 px +
 @media (min-width: 1200px) {
 	.main {
 		.elements__element {
@@ -394,3 +446,4 @@ table {
 		}
 	}
 }
+// ==================== MEDIA QUERIES =====================

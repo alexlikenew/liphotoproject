@@ -150,9 +150,9 @@ table {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 5rem;
 }
 .main .elements {
+  margin-top: 5rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -204,6 +204,31 @@ table {
 .main .elements__element:hover img {
   opacity: 0.82;
   transform: scale(1.1);
+}
+
+.main .about-me {
+  margin-top: 0;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0 5rem 0;
+}
+.about-me__image {
+  width: 100%;
+}
+.about-me__image img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+.about-me__text {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.about-me__text p {
+  padding: 16px 0;
+  line-height: 26.6px;
 }
 
 .footer {
@@ -355,6 +380,24 @@ table {
   .main .elements {
     align-items: flex-start;
   }
+  .about-me {
+    display: flex;
+    flex-direction: row;
+  }
+  .about-me__image {
+    width: 40%;
+  }
+  .about-me__text {
+    width: 55%;
+  }
+}
+@media (min-width: 768px) {
+  .about-me__image {
+    width: 60%;
+  }
+  .about-me__text {
+    width: 35%;
+  }
 }
 @media (min-width: 992px) {
   .main .elements__element {
@@ -368,6 +411,12 @@ table {
   }
   .hide {
     display: block;
+  }
+  .about-me__image {
+    width: 30%;
+  }
+  .about-me__text {
+    width: 35%;
   }
 }
 @media (min-width: 1200px) {
