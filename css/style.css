@@ -81,6 +81,7 @@ table {
 .header__topNav {
   width: 100%;
   padding: 2rem 0;
+  background: #f2ebde;
 }
 .header__topNav nav {
   display: flex;
@@ -104,6 +105,10 @@ table {
   width: 30px;
   height: 30px;
   margin-right: 2rem;
+  transition: transform 0.5s;
+}
+.header__topNav nav img:hover {
+  transform: scale(1.1);
 }
 .header__topNav nav li:hover a {
   animation: colorRotate 3s linear 0s infinite;
@@ -112,6 +117,7 @@ table {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 2rem 0;
 }
 .header__info h2 {
   width: 100%;
@@ -225,8 +231,9 @@ table {
 }
 .footer__bottomNav nav {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
   font-family: Oswald;
   font-weight: 700;
@@ -236,9 +243,22 @@ table {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 5px;
+  width: 100%;
 }
-.footer__bottomNav nav a {
+.footer__bottomNav nav li a {
   color: black;
+}
+.footer__bottomNav nav img {
+  width: 30px;
+  height: 30px;
+  margin-right: 2rem;
+  transition: transform 0.5s;
+}
+.footer__bottomNav nav img:hover {
+  transform: scale(1.1);
+}
+.footer__bottomNav nav li:hover a {
+  animation: colorRotate 3s linear 0s infinite;
 }
 .footer__info {
   display: flex;
@@ -292,10 +312,6 @@ table {
 .footer__rights p a:hover {
   animation: colorRotate 3s linear 0s infinite;
 }
-.footer__rights p a img {
-  width: 30px;
-  height: 30px;
-}
 
 @keyframes colorRotate {
   from {
@@ -316,6 +332,12 @@ table {
 }
 @media (min-width: 576px) {
   .header__topNav nav {
+    justify-content: space-evenly;
+    padding: 0;
+    flex-direction: row;
+  }
+  .footer__bottomNav nav {
+    display: flex;
     justify-content: space-evenly;
     padding: 0;
     flex-direction: row;

@@ -76,6 +76,7 @@ table {
 	&__topNav {
 		width: 100%;
 		padding: 2rem 0;
+		background: #f2ebde;
 		nav {
 			display: flex;
 			flex-direction: column;
@@ -90,7 +91,7 @@ table {
 			text-transform: uppercase;
 			text-decoration: none;
 			letter-spacing: 5px;
-			
+
 			li a {
 				color: black;
 			}
@@ -98,6 +99,10 @@ table {
 				width: 30px;
 				height: 30px;
 				margin-right: 2rem;
+				transition: transform 0.5s;
+				&:hover {
+					transform: scale(1.1);
+				}
 			}
 			li:hover a {
 				animation: colorRotate 3s linear 0s infinite;
@@ -108,6 +113,7 @@ table {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
+		padding: 2rem 0;
 		h2 {
 			width: 100%;
 			text-align: center;
@@ -220,8 +226,9 @@ table {
 		}
 		nav {
 			display: flex;
-			flex-direction: row;
-			justify-content: space-evenly;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
 			list-style: none;
 			font-family: Oswald;
 			font-weight: 700;
@@ -231,8 +238,22 @@ table {
 			text-transform: uppercase;
 			text-decoration: none;
 			letter-spacing: 5px;
-			a {
+			width: 100%;
+
+			li a {
 				color: black;
+			}
+			img {
+				width: 30px;
+				height: 30px;
+				margin-right: 2rem;
+				transition: transform 0.5s;
+					&:hover {
+						transform: scale(1.1);
+					}
+			}
+			li:hover a {
+				animation: colorRotate 3s linear 0s infinite;
 			}
 		}
 	}
@@ -288,10 +309,7 @@ table {
 				&:hover {
 					animation: colorRotate 3s linear 0s infinite;
 				}
-				img {
-					width: 30px;
-					height: 30px;
-				}
+				
 			}
 		}
 	}
@@ -320,9 +338,14 @@ table {
 		justify-content: space-evenly;
 		padding: 0;
 		flex-direction: row;
-		
 	}
-	.header__info h2{
+	.footer__bottomNav nav {
+		display: flex;
+		justify-content: space-evenly;
+		padding: 0;
+		flex-direction: row;
+	}
+	.header__info h2 {
 		font-size: 7rem;
 	}
 	.main {
@@ -345,8 +368,8 @@ table {
 }
 //MEDIA QUERIES 992px - 1200px
 @media (min-width: 992px) {
-	.main .elements__element{
-margin-bottom: 0;
+	.main .elements__element {
+		margin-bottom: 0;
 	}
 	.main {
 		.wrapper {
