@@ -44,6 +44,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.hide {
+	display: none;
+}
 .wrapper {
 	position: relative;
 	width: 100%;
@@ -75,8 +78,9 @@ table {
 		padding: 2rem 0;
 		nav {
 			display: flex;
-			flex-direction: row;
+			flex-direction: column;
 			justify-content: space-between;
+			align-items: center;
 			list-style: none;
 			font-family: Oswald;
 			font-weight: 700;
@@ -86,9 +90,14 @@ table {
 			text-transform: uppercase;
 			text-decoration: none;
 			letter-spacing: 5px;
-			padding: 0 1rem;
+			
 			li a {
 				color: black;
+			}
+			img {
+				width: 30px;
+				height: 30px;
+				margin-right: 2rem;
 			}
 			li:hover a {
 				animation: colorRotate 3s linear 0s infinite;
@@ -102,7 +111,7 @@ table {
 		h2 {
 			width: 100%;
 			text-align: center;
-			font-size: 7rem;
+			font-size: 5rem;
 			color: #030303;
 		}
 		&__text {
@@ -117,7 +126,7 @@ table {
 			text-decoration: none;
 			letter-spacing: 1.11px;
 			color: #030303;
-			margin-top: 0.2em;
+			margin-top: 2rem;
 			width: 100%;
 			cursor: default;
 		}
@@ -131,27 +140,26 @@ table {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	margin-top: 8rem;
+	margin-top: 5rem;
 	.elements {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	
-		&__column{
+
+		&__column {
 			width: 90%;
 			display: flex;
 			flex-direction: column;
-			
 		}
 		&__element {
 			position: relative;
 			width: 100%;
-			margin-bottom: 1rem;
 			transition: 0.3s;
 			text-decoration: none;
 			overflow: hidden;
+			margin-bottom: 0.4rem;
 			&__image {
 				width: 100%;
 				transition: transform 0.5s;
@@ -252,12 +260,10 @@ table {
 			color: #030303;
 			margin-top: 0.2em;
 			width: 100%;
-			
 		}
 	}
 
 	&__rights {
-		
 		padding-top: 4rem;
 		display: flex;
 		justify-content: center;
@@ -310,53 +316,58 @@ table {
 }
 //MEDIA QUERIES 578px - 768px
 @media (min-width: 576px) {
-	.header__topNav nav{
+	.header__topNav nav {
 		justify-content: space-evenly;
 		padding: 0;
+		flex-direction: row;
+		
 	}
-	.main{
-		.wrapper{
-			flex-direction:row ;
+	.header__info h2{
+		font-size: 7rem;
+	}
+	.main {
+		.wrapper {
+			flex-direction: row;
 			justify-content: space-evenly;
 		}
-		.elements__element{
+		.elements__element {
 		}
-		.elements__column{
+		.elements__column {
 			width: 90%;
-
 		}
-		.elements{
+		.elements {
 			align-items: flex-start;
-	}
+		}
 	}
 }
 //MEDIA QUERIES 768px - 992px
 @media (min-width: 768px) {
-
 }
 //MEDIA QUERIES 992px - 1200px
 @media (min-width: 992px) {
-	.main{
-		.wrapper{
-			
+	.main .elements__element{
+margin-bottom: 0;
+	}
+	.main {
+		.wrapper {
 			justify-content: space-evenly;
 		}
-	
-		.elements__column{
-			width: 31%;
 
+		.elements__column {
+			width: 32%;
 		}
+	}
+	.hide {
+		display: block;
 	}
 }
 //MEDIA QUERIES 1200 px +
 @media (min-width: 1200px) {
-	.main{
-		
-		.elements__element{
+	.main {
+		.elements__element {
 		}
-		.elements__column{
-			width: 32%;
-
+		.elements__column {
+			width: 32.8%;
 		}
 	}
 }
