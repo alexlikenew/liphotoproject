@@ -6,3 +6,6 @@ const elementText = document.querySelector('.elements__element__text')
 const wrapper = document.querySelector('.wrapper')
 const footerInfo = document.querySelector('.footer__info')
 const footerRight = document.querySelector('.footer__rights')
+
+
+
