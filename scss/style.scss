@@ -165,10 +165,12 @@ table {
 		&__element {
 			position: relative;
 			width: 100%;
+		
 			transition: 0.3s;
 			text-decoration: none;
 			overflow: hidden;
 			margin-bottom: 0.4rem;
+			
 			&__image {
 				width: 100%;
 				transition: transform 0.5s;
