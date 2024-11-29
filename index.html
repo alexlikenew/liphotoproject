@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <header class="header">
         <div class="wrapper">
@@ -40,9 +42,21 @@
         <div class="wrapper elements">
             <div class="elements__column">
                 <a href="portfolio.html" class="elements__element">
-                    <img class="elements__element__image" src="./img/mobile/chokolate-cream_high_res.jpg" alt="">
+                    <picture class="elements__element">
+                        <!-- Mobile Image -->
+                        <source media="(max-width: 575px)"
+                            srcset="./img/mobile/chokolate-cream_high_res.jpg">
+                        <!-- Tablet Image -->
+                        <source media="(min-width:576px) and (max-width:767px)" srcset="./img/tablet/chokolate-cream_high_res.jpg">
+                        <!-- Screen Image -->
+                        <source media="(min-width:992px) and (max-width:1199px)" srcset="./img/tablet/chokolate-cream_high_res.jpg">
+                        <!-- Fallback Image --> <img class="elements__element__image" aria-hidden="true" loading="lazy" decoding="async"
+                            src="./img/chokolate-cream_high_res.jpg" alt="kitchen cabinets"
+                            >
+                    </picture>
                     <p class="elements__element__text">Nutella Cream</p>
                 </a>
+
                 <a href="portfolio.html" class="elements__element">
                     <img loading="lazy" class="elements__element__image" src="./img/mobile/cookies_high_res.jpg" alt="">
                     <p class="elements__element__text">Foodie Cookies</p>
@@ -52,7 +66,8 @@
                     <p class="elements__element__text"> Vege Oat Milk</p>
                 </a>
                 <a href="portfolio.html" class="elements__element">
-                    <img loading="lazy" class="elements__element__image" src="./img/mobile/sushi_jojo_high_res.jpg" alt="">
+                    <img loading="lazy" class="elements__element__image" src="./img/mobile/sushi_jojo_high_res.jpg"
+                        alt="">
                     <p class="elements__element__text"> Jojo Sushi</p>
                 </a>
             </div>
@@ -62,7 +77,8 @@
                     <p class="elements__element__text">Freixenet Vine</p>
                 </a>
                 <a href="portfolio.html" class="elements__element">
-                    <img loading="lazy" class="elements__element__image" src="./img/mobile/crash_cookies_high_res.jpg" alt="">
+                    <img loading="lazy" class="elements__element__image" src="./img/mobile/crash_cookies_high_res.jpg"
+                        alt="">
                     <p class="elements__element__text">Cookie Sticks</p>
                 </a>
                 <a href="portfolio.html" class="elements__element">
@@ -71,7 +87,8 @@
                 </a>
 
                 <a href="" class="elements__element">
-                    <img loading="lazy" class="elements__element__image" src="./img/mobile/bielenda_high_res.jpg" alt="">
+                    <img loading="lazy" class="elements__element__image" src="./img/mobile/bielenda_high_res.jpg"
+                        alt="">
                     <p class="elements__element__text">Bielenda Cream</p>
                 </a>
             </div>
@@ -118,4 +135,5 @@
     </footer>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
