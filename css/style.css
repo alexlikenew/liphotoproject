@@ -119,6 +119,7 @@ table {
   width: 100%;
   padding: 2rem 0;
 }
+.header__info h1,
 .header__info h2 {
   width: 100%;
   text-align: center;
@@ -504,6 +505,7 @@ table {
   flex-direction: column;
   width: 100%;
 }
+.footer__info h1,
 .footer__info h2 {
   width: 100%;
   text-align: center;
@@ -581,6 +583,7 @@ table {
     padding: 0;
     flex-direction: row;
   }
+  .header__info h1,
   .header__info h2 {
     font-size: 7rem;
   }
