@@ -148,6 +148,7 @@ table {
 
 .main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -206,6 +207,47 @@ table {
   opacity: 0.82;
   transform: scale(1.1);
 }
+.main .help-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+.main .help-box__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-family: Oswald;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.6em;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 5px;
+  width: 100%;
+}
+.main .help-box__text {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .help-box__text__element {
+  width: 32.8%;
+}
+.main .help-box__text__element p {
+  padding: 2rem 2rem;
+  line-height: 26.6px;
+  text-align: center;
+  font-size: 2rem;
+}
 
 .main .about-me {
   margin-top: 0;
@@ -214,7 +256,7 @@ table {
 .about-me {
   display: flex;
   flex-direction: column;
-  padding: 3rem 0 5rem 0;
+  padding: 3rem 1rem 5rem 1rem;
 }
 .about-me__image {
   width: 100%;
